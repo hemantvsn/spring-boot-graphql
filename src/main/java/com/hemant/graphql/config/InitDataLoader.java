@@ -38,7 +38,6 @@ public class InitDataLoader {
 			art.setName(RandomStringUtils.randomAlphabetic(10));
 			art.setCreatedOn(new Date());
 			art.setLastUpdatedOn(new Date());
-			art.setFeedbacks(Collections.emptyList());
 			mongo.save(art);
 			
 			LOG.info("Saved article : {}", art);
