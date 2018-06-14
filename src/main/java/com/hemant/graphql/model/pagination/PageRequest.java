@@ -1,4 +1,4 @@
-package com.hemant.graphql.model;
+package com.hemant.graphql.model.pagination;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,11 +21,6 @@ import org.springframework.util.CollectionUtils;
  */
 
 public class PageRequest {
-	
-	public static enum SortOrder {
-		ASC, DESC;
-	}
-
 
 	private static final Logger LOG = LoggerFactory.getLogger(PageRequest.class);
 	private static final String NEW_LINE = "\n";
