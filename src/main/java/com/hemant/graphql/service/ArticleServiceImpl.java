@@ -1,8 +1,10 @@
 package com.hemant.graphql.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +12,8 @@ import org.springframework.stereotype.Service;
 
 import com.hemant.graphql.dal.ArticleDAL;
 import com.hemant.graphql.model.Article;
-import com.hemant.graphql.model.PageRequest;
+import com.hemant.graphql.model.Feedback;
+import com.hemant.graphql.model.pagination.PageRequest;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {
@@ -28,6 +31,55 @@ public class ArticleServiceImpl implements ArticleService {
 		}
 		
 		return articleDAL.getAllArticles(pageRequest);
+	}
+	
+	@Override
+	public Article createArticle(String name, String createdByUserId) {
+		if(StringUtils.isBlank(name)) {
+			throw new IllegalArgumentException("Article name cannot be blank");
+		}
+		
+		if(StringUtils.isBlank(createdByUserId)) {
+			throw new IllegalArgumentException("CreatedByUserId cannot be blank");
+		}
+		
+		String id = new ObjectId().toString();
+		Article art = new Article();
+		art.setId(id);
+		art.setCreatedByUserId(createdByUserId);
+		art.setName(name);
+		art.setCreatedOn(new Date());
+		art.setLastUpdatedOn(new Date());
+		
+		articleDAL.saveArticle(art);
+		LOG.info("Article created successfully :{}", art);
+		return art;
+		
+	}
+
+	@Override
+	public List<Feedback> getFeedbacksForArticle(String articleId, PageRequest pageRequest) {
+		return articleDAL.getFeedbacksForArticle(articleId, pageRequest);
+	}
+	
+	@Override
+	public Feedback createFeedback(String feedbackText, String articleId, String createdByUserId) {
+		Article article = articleDAL.getArticleById(articleId);
+		if(null == article) {
+			LOG.error("No article exists for articleId :{}", articleId);
+			throw new IllegalArgumentException("No article exists for articleId :" + articleId);
+		}
+		
+		Feedback feedback = new Feedback();
+		feedback.setArticleId(articleId);
+		feedback.setCreatedByUserId(createdByUserId);
+		feedback.setFeedbackText(feedbackText);
+		feedback.setCreatedOn(new Date());
+		feedback.setLastUpdatedOn(new Date());
+		
+		articleDAL.saveFeedback(feedback);
+		LOG.info("Feedback created as :{} for article :{}", feedback, article);
+		return feedback;
 	}
 	
 }

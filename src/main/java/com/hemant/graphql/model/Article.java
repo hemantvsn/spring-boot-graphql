@@ -1,7 +1,6 @@
 package com.hemant.graphql.model;
 
 import java.util.Date;
-import java.util.List;
 
 public class Article {
 
@@ -10,7 +9,6 @@ public class Article {
 	private String createdByUserId;
 	private Date createdOn;
 	private Date lastUpdatedOn;
-	private List<Feedback> feedbacks;
 
 	public String getId() {
 		return id;
@@ -50,14 +48,6 @@ public class Article {
 
 	public void setLastUpdatedOn(Date lastUpdatedOn) {
 		this.lastUpdatedOn = lastUpdatedOn;
-	}
-
-	public List<Feedback> getFeedbacks() {
-		return feedbacks;
-	}
-
-	public void setFeedbacks(List<Feedback> feedbacks) {
-		this.feedbacks = feedbacks;
 	}
 
 	@Override
