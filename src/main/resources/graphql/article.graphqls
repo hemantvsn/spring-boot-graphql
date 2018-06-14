@@ -1,0 +1,19 @@
+type Article {
+   id: String
+   name: String
+   createdByUserId: String
+   createdOn: String
+   lastUpdatedOn: String
+   feedbacks : [Feedback]
+}
+
+type Query {
+	getArticles(pageNumber : Int!, pageSize : Int!) : [Article]
+	getArticleById(id : String!) : Article
+	getArticlesForUser(pageNumber : Int!, pageSize : Int!, userId : String!) : [Article]
+}
+
+type Mutation {
+	createNewArticle(name : String!, createdByUserId : String!)
+	deleteArticle(id : String!)
+}
