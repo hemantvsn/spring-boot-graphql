@@ -23,8 +23,7 @@ public class Query implements GraphQLQueryResolver {
 		return articleService.getAllArticles(pageRequest);
 	}
 	
-	public List<Feedback> getFeedBacksForArticle(String articleId, int pageNumber, int pageSize, SortOrder sortOrder, String sortBy) {
-		PageRequest pageRequest = new PageRequest(pageNumber, pageSize, sortOrder, sortBy);
-		return articleService.getFeedbacksForArticle(articleId, pageRequest);
+	public List<Feedback> getFeedBacksForArticle(String articleId) {
+		return articleService.getFeedbacksForArticle(articleId);
 	}
 }

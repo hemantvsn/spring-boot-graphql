@@ -1,9 +1,11 @@
 package com.hemant.graphql.service;
 
+import static org.apache.commons.lang3.StringUtils.isBlank;
+import static org.apache.commons.lang3.StringUtils.isNotBlank;
+
 import java.util.Date;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
 import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +28,7 @@ public class ArticleServiceImpl implements ArticleService {
 	@Override
 	public List<Article> getAllArticles(PageRequest pageRequest) {
 		String validationErrors = PageRequest.validatePaginationParams(pageRequest);
-		if(StringUtils.isNotBlank(validationErrors)) {
+		if(isNotBlank(validationErrors)) {
 			throw new IllegalArgumentException(validationErrors);
 		}
 		
@@ -35,11 +37,11 @@ public class ArticleServiceImpl implements ArticleService {
 	
 	@Override
 	public Article createArticle(String name, String createdByUserId) {
-		if(StringUtils.isBlank(name)) {
+		if(isBlank(name)) {
 			throw new IllegalArgumentException("Article name cannot be blank");
 		}
 		
-		if(StringUtils.isBlank(createdByUserId)) {
+		if(isBlank(createdByUserId)) {
 			throw new IllegalArgumentException("CreatedByUserId cannot be blank");
 		}
 		
@@ -58,12 +60,21 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 
 	@Override
-	public List<Feedback> getFeedbacksForArticle(String articleId, PageRequest pageRequest) {
-		return articleDAL.getFeedbacksForArticle(articleId, pageRequest);
+	public List<Feedback> getFeedbacksForArticle(String articleId) {
+		return articleDAL.getFeedbacksForArticle(articleId);
 	}
 	
 	@Override
 	public Feedback createFeedback(String feedbackText, String articleId, String createdByUserId) {
+		
+		if(isBlank(feedbackText)) {
+			throw new IllegalArgumentException("FeedbackText name cannot be blank");
+		}
+		
+		if(isBlank(createdByUserId)) {
+			throw new IllegalArgumentException("CreatedByUserId cannot be blank");
+		}
+		
 		Article article = articleDAL.getArticleById(articleId);
 		if(null == article) {
 			LOG.error("No article exists for articleId :{}", articleId);

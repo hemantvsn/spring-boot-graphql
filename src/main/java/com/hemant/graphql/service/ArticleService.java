@@ -12,7 +12,7 @@ public interface ArticleService {
 
 	Article createArticle(String name, String createdByUserId);
 
-	List<Feedback> getFeedbacksForArticle(String articleId, PageRequest pageRequest);
+	List<Feedback> getFeedbacksForArticle(String articleId);
 
 	Feedback createFeedback(String feedbackText, String articleId, String createdByUserId);
 

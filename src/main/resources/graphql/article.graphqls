@@ -1,19 +1,36 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+enum SortOrder {
+	ASC
+	DESC
+}
+
 type Article {
    id: String
    name: String
    createdByUserId: String
    createdOn: String
    lastUpdatedOn: String
-   feedbacks : [Feedback]
+}
+
+type Feedback {
+    id: String
+    feedbackText: String
+    articleId: String
+    createdByUserId: String
+    createdOn: String
+    lastUpdatedOn: String
 }
 
 type Query {
-	getArticles(pageNumber : Int!, pageSize : Int!) : [Article]
-	getArticleById(id : String!) : Article
-	getArticlesForUser(pageNumber : Int!, pageSize : Int!, userId : String!) : [Article]
+	getAllArticles(pageNumber: Int!, pageSize : Int!, sortOrder: SortOrder!, sortBy: String!): [Article]
+	getFeedBacksForArticle(articleId: String!): [Feedback]
 }
 
 type Mutation {
-	createNewArticle(name : String!, createdByUserId : String!)
-	deleteArticle(id : String!)
+	createArticle(name: String!, createdByUserId: String!): Article
+	createNewFeedback(feedbackText: String!, articleId: String!, createdByUserId: String!): Feedback
 }

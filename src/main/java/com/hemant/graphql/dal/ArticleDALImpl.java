@@ -30,8 +30,8 @@ public class ArticleDALImpl implements ArticleDAL {
 	}
 
 	@Override
-	public List<Feedback> getFeedbacksForArticle(String articleId, PageRequest pageRequest) {
-		Query query = PageRequest.getPaginationQueryForMongo(pageRequest);
+	public List<Feedback> getFeedbacksForArticle(String articleId) {
+		Query query = new Query();
 		query.addCriteria(Criteria.where("articleId").is(articleId));
 		return mongo.find(query, Feedback.class);
 	}

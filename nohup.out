@@ -1,0 +1,180 @@
+2018-06-14T13:13:57.882+0530 I CONTROL  [initandlisten] MongoDB starting : pid=58319 port=27017 dbpath=/data/db 64-bit host=Hemya-MacBook
+2018-06-14T13:13:57.882+0530 I CONTROL  [initandlisten] db version v3.4.6
+2018-06-14T13:13:57.882+0530 I CONTROL  [initandlisten] git version: c55eb86ef46ee7aede3b1e2a5d184a7df4bfb5b5
+2018-06-14T13:13:57.882+0530 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2l  25 May 2017
+2018-06-14T13:13:57.882+0530 I CONTROL  [initandlisten] allocator: system
+2018-06-14T13:13:57.882+0530 I CONTROL  [initandlisten] modules: none
+2018-06-14T13:13:57.882+0530 I CONTROL  [initandlisten] build environment:
+2018-06-14T13:13:57.882+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2018-06-14T13:13:57.882+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-06-14T13:13:57.882+0530 I CONTROL  [initandlisten] options: {}
+2018-06-14T13:13:57.883+0530 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-06-14T13:13:57.883+0530 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=5632M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2018-06-14T13:13:58.463+0530 I CONTROL  [initandlisten] 
+2018-06-14T13:13:58.463+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-06-14T13:13:58.463+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-06-14T13:13:58.464+0530 I CONTROL  [initandlisten] 
+2018-06-14T13:13:58.464+0530 I CONTROL  [initandlisten] 
+2018-06-14T13:13:58.464+0530 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2018-06-14T13:13:58.500+0530 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2018-06-14T13:13:58.501+0530 I NETWORK  [thread1] waiting for connections on port 27017
+2018-06-14T13:15:50.126+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:54475 #1 (1 connection now open)
+2018-06-14T13:15:50.140+0530 I NETWORK  [conn1] received client metadata from 127.0.0.1:54475 conn1: { driver: { name: "mongo-java-driver", version: "3.4.3-dirty" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-14T13:15:50.333+0530 I ACCESS   [conn1] Successfully authenticated as principal root on admin
+2018-06-14T13:15:52.139+0530 I -        [conn1] end connection 127.0.0.1:54475 (1 connection now open)
+2018-06-14T18:12:37.040+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:57260 #2 (1 connection now open)
+2018-06-14T18:12:37.060+0530 I NETWORK  [conn2] received client metadata from 127.0.0.1:57260 conn2: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-14T18:12:37.308+0530 I ACCESS   [conn2] Successfully authenticated as principal root on admin
+2018-06-14T18:12:38.304+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:57261 #3 (2 connections now open)
+2018-06-14T18:12:38.304+0530 I NETWORK  [conn3] received client metadata from 127.0.0.1:57261 conn3: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-14T18:14:25.800+0530 I -        [conn3] end connection 127.0.0.1:57261 (2 connections now open)
+2018-06-14T18:14:25.800+0530 I -        [conn2] end connection 127.0.0.1:57260 (2 connections now open)
+2018-06-15T00:11:18.751+0530 I COMMAND  [ftdc] serverStatus was very slow: { after basic: 0, after asserts: 8033729, after backgroundFlushing: 8033729, after connections: 8033729, after dur: 8033729, after extra_info: 8033729, after globalLock: 8033729, after locks: 8033729, after network: 8033729, after opLatencies: 8033729, after opcounters: 8033729, after opcountersRepl: 8033729, after repl: 8033729, after security: 8033729, after storageEngine: 8033729, after wiredTiger: 8033814, at end: 8033814 }
+2018-06-15T01:11:32.401+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:58931 #4 (1 connection now open)
+2018-06-15T01:11:32.420+0530 I NETWORK  [conn4] received client metadata from 127.0.0.1:58931 conn4: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:11:32.722+0530 I ACCESS   [conn4] Successfully authenticated as principal root on admin
+2018-06-15T01:11:38.982+0530 I -        [conn4] end connection 127.0.0.1:58931 (1 connection now open)
+2018-06-15T01:13:15.891+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59003 #5 (1 connection now open)
+2018-06-15T01:13:15.935+0530 I NETWORK  [conn5] received client metadata from 127.0.0.1:59003 conn5: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:13:16.196+0530 I ACCESS   [conn5] Successfully authenticated as principal root on admin
+2018-06-15T01:13:22.078+0530 I -        [conn5] end connection 127.0.0.1:59003 (1 connection now open)
+2018-06-15T01:14:31.365+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59013 #6 (1 connection now open)
+2018-06-15T01:14:31.385+0530 I NETWORK  [conn6] received client metadata from 127.0.0.1:59013 conn6: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:14:31.605+0530 I ACCESS   [conn6] Successfully authenticated as principal root on admin
+2018-06-15T01:14:36.925+0530 I -        [conn6] end connection 127.0.0.1:59013 (1 connection now open)
+2018-06-15T01:17:02.813+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59031 #7 (1 connection now open)
+2018-06-15T01:17:02.834+0530 I NETWORK  [conn7] received client metadata from 127.0.0.1:59031 conn7: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:17:03.127+0530 I ACCESS   [conn7] Successfully authenticated as principal root on admin
+2018-06-15T01:18:24.071+0530 I -        [conn7] end connection 127.0.0.1:59031 (1 connection now open)
+2018-06-15T01:19:05.308+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59043 #8 (1 connection now open)
+2018-06-15T01:19:05.357+0530 I NETWORK  [conn8] received client metadata from 127.0.0.1:59043 conn8: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:19:05.584+0530 I ACCESS   [conn8] Successfully authenticated as principal root on admin
+2018-06-15T01:19:10.086+0530 I -        [conn8] end connection 127.0.0.1:59043 (1 connection now open)
+2018-06-15T01:23:17.518+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59155 #9 (1 connection now open)
+2018-06-15T01:23:17.539+0530 I NETWORK  [conn9] received client metadata from 127.0.0.1:59155 conn9: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:23:17.810+0530 I ACCESS   [conn9] Successfully authenticated as principal root on admin
+2018-06-15T01:23:32.494+0530 I -        [conn9] end connection 127.0.0.1:59155 (1 connection now open)
+2018-06-15T01:24:02.220+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59164 #10 (1 connection now open)
+2018-06-15T01:24:02.239+0530 I NETWORK  [conn10] received client metadata from 127.0.0.1:59164 conn10: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:24:02.493+0530 I ACCESS   [conn10] Successfully authenticated as principal root on admin
+2018-06-15T01:25:10.870+0530 I -        [conn10] end connection 127.0.0.1:59164 (1 connection now open)
+2018-06-15T01:27:27.366+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59190 #11 (1 connection now open)
+2018-06-15T01:27:27.393+0530 I NETWORK  [conn11] received client metadata from 127.0.0.1:59190 conn11: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:27:27.624+0530 I ACCESS   [conn11] Successfully authenticated as principal root on admin
+2018-06-15T01:27:29.291+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59191 #12 (2 connections now open)
+2018-06-15T01:27:29.292+0530 I NETWORK  [conn12] received client metadata from 127.0.0.1:59191 conn12: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:27:29.384+0530 I ACCESS   [conn12] Successfully authenticated as principal root on admin
+2018-06-15T01:27:30.599+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59192 #13 (3 connections now open)
+2018-06-15T01:27:30.600+0530 I NETWORK  [conn13] received client metadata from 127.0.0.1:59192 conn13: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:31:15.317+0530 I -        [conn12] end connection 127.0.0.1:59191 (3 connections now open)
+2018-06-15T01:31:15.317+0530 I -        [conn13] end connection 127.0.0.1:59192 (3 connections now open)
+2018-06-15T01:31:15.317+0530 I -        [conn11] end connection 127.0.0.1:59190 (3 connections now open)
+2018-06-15T01:33:33.716+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59234 #14 (1 connection now open)
+2018-06-15T01:33:33.737+0530 I NETWORK  [conn14] received client metadata from 127.0.0.1:59234 conn14: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:33:34.016+0530 I ACCESS   [conn14] Successfully authenticated as principal root on admin
+2018-06-15T01:33:35.438+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59235 #15 (2 connections now open)
+2018-06-15T01:33:35.439+0530 I NETWORK  [conn15] received client metadata from 127.0.0.1:59235 conn15: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:33:35.537+0530 I ACCESS   [conn15] Successfully authenticated as principal root on admin
+2018-06-15T01:33:36.721+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59236 #16 (3 connections now open)
+2018-06-15T01:33:36.722+0530 I NETWORK  [conn16] received client metadata from 127.0.0.1:59236 conn16: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:34:19.467+0530 I -        [conn16] end connection 127.0.0.1:59236 (3 connections now open)
+2018-06-15T01:34:19.468+0530 I -        [conn15] end connection 127.0.0.1:59235 (2 connections now open)
+2018-06-15T01:34:19.468+0530 I -        [conn14] end connection 127.0.0.1:59234 (1 connection now open)
+2018-06-15T01:34:27.587+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59243 #17 (1 connection now open)
+2018-06-15T01:34:27.621+0530 I NETWORK  [conn17] received client metadata from 127.0.0.1:59243 conn17: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:34:27.876+0530 I ACCESS   [conn17] Successfully authenticated as principal root on admin
+2018-06-15T01:34:29.501+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59244 #18 (2 connections now open)
+2018-06-15T01:34:29.503+0530 I NETWORK  [conn18] received client metadata from 127.0.0.1:59244 conn18: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:34:29.604+0530 I ACCESS   [conn18] Successfully authenticated as principal root on admin
+2018-06-15T01:34:31.283+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59246 #19 (3 connections now open)
+2018-06-15T01:34:31.283+0530 I NETWORK  [conn19] received client metadata from 127.0.0.1:59246 conn19: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:34:41.338+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59248 #20 (4 connections now open)
+2018-06-15T01:34:41.339+0530 I NETWORK  [conn20] received client metadata from 127.0.0.1:59248 conn20: { driver: { name: "mongo-java-driver", version: "3T_5.1.1-478-gfd17fbf" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:34:41.377+0530 I ACCESS   [conn20] Successfully authenticated as principal root on admin
+2018-06-15T01:34:41.380+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59249 #21 (5 connections now open)
+2018-06-15T01:34:41.381+0530 I NETWORK  [conn21] received client metadata from 127.0.0.1:59249 conn21: { driver: { name: "mongo-java-driver", version: "3T_5.1.1-478-gfd17fbf" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:34:41.413+0530 I ACCESS   [conn21] Successfully authenticated as principal root on admin
+2018-06-15T01:34:43.568+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59250 #22 (6 connections now open)
+2018-06-15T01:34:43.568+0530 I NETWORK  [conn22] received client metadata from 127.0.0.1:59250 conn22: { driver: { name: "mongo-java-driver", version: "3T_5.1.1-478-gfd17fbf" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T01:34:43.593+0530 I ACCESS   [conn22] Successfully authenticated as principal root on admin
+2018-06-15T01:34:46.321+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59251 #23 (7 connections now open)
+2018-06-15T01:34:46.322+0530 I NETWORK  [conn23] received client metadata from 127.0.0.1:59251 conn23: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.7" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "17.5.0" } }
+2018-06-15T01:34:46.358+0530 I ACCESS   [conn23] Successfully authenticated as principal root on admin
+2018-06-15T01:41:45.357+0530 I -        [conn19] end connection 127.0.0.1:59246 (7 connections now open)
+2018-06-15T01:41:45.357+0530 I -        [conn18] end connection 127.0.0.1:59244 (7 connections now open)
+2018-06-15T01:41:45.357+0530 I -        [conn17] end connection 127.0.0.1:59243 (6 connections now open)
+2018-06-15T02:02:54.535+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59599 #24 (5 connections now open)
+2018-06-15T02:02:54.555+0530 I NETWORK  [conn24] received client metadata from 127.0.0.1:59599 conn24: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:02:54.767+0530 I ACCESS   [conn24] Successfully authenticated as principal root on admin
+2018-06-15T02:03:03.445+0530 I -        [conn24] end connection 127.0.0.1:59599 (5 connections now open)
+2018-06-15T02:05:59.101+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59617 #25 (5 connections now open)
+2018-06-15T02:05:59.120+0530 I NETWORK  [conn25] received client metadata from 127.0.0.1:59617 conn25: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:05:59.389+0530 I ACCESS   [conn25] Successfully authenticated as principal root on admin
+2018-06-15T02:06:06.376+0530 I -        [conn25] end connection 127.0.0.1:59617 (5 connections now open)
+2018-06-15T02:08:24.505+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59662 #26 (5 connections now open)
+2018-06-15T02:08:24.547+0530 I NETWORK  [conn26] received client metadata from 127.0.0.1:59662 conn26: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:08:24.802+0530 I ACCESS   [conn26] Successfully authenticated as principal root on admin
+2018-06-15T02:08:39.555+0530 I -        [conn26] end connection 127.0.0.1:59662 (5 connections now open)
+2018-06-15T02:13:29.015+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59693 #27 (5 connections now open)
+2018-06-15T02:13:29.031+0530 I NETWORK  [conn27] received client metadata from 127.0.0.1:59693 conn27: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:13:29.226+0530 I ACCESS   [conn27] Successfully authenticated as principal root on admin
+2018-06-15T02:13:36.823+0530 I -        [conn27] end connection 127.0.0.1:59693 (5 connections now open)
+2018-06-15T02:18:40.854+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59710 #28 (5 connections now open)
+2018-06-15T02:18:40.880+0530 I NETWORK  [conn28] received client metadata from 127.0.0.1:59710 conn28: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:18:41.167+0530 I ACCESS   [conn28] Successfully authenticated as principal root on admin
+2018-06-15T02:18:42.821+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59711 #29 (6 connections now open)
+2018-06-15T02:18:42.822+0530 I NETWORK  [conn29] received client metadata from 127.0.0.1:59711 conn29: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:18:42.915+0530 I ACCESS   [conn29] Successfully authenticated as principal root on admin
+2018-06-15T02:18:44.058+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59712 #30 (7 connections now open)
+2018-06-15T02:18:44.059+0530 I NETWORK  [conn30] received client metadata from 127.0.0.1:59712 conn30: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:18:48.019+0530 I -        [conn30] end connection 127.0.0.1:59712 (7 connections now open)
+2018-06-15T02:18:48.019+0530 I -        [conn29] end connection 127.0.0.1:59711 (7 connections now open)
+2018-06-15T02:18:48.019+0530 I -        [conn28] end connection 127.0.0.1:59710 (6 connections now open)
+2018-06-15T02:19:12.228+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59715 #31 (5 connections now open)
+2018-06-15T02:19:12.245+0530 I NETWORK  [conn31] received client metadata from 127.0.0.1:59715 conn31: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:19:12.470+0530 I ACCESS   [conn31] Successfully authenticated as principal root on admin
+2018-06-15T02:19:13.960+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59716 #32 (6 connections now open)
+2018-06-15T02:19:13.961+0530 I NETWORK  [conn32] received client metadata from 127.0.0.1:59716 conn32: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:19:13.996+0530 I ACCESS   [conn32] Successfully authenticated as principal root on admin
+2018-06-15T02:19:15.122+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59717 #33 (7 connections now open)
+2018-06-15T02:19:15.123+0530 I NETWORK  [conn33] received client metadata from 127.0.0.1:59717 conn33: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:20:09.715+0530 I -        [conn33] end connection 127.0.0.1:59717 (7 connections now open)
+2018-06-15T02:20:09.715+0530 I -        [conn32] end connection 127.0.0.1:59716 (7 connections now open)
+2018-06-15T02:20:09.715+0530 I -        [conn31] end connection 127.0.0.1:59715 (7 connections now open)
+2018-06-15T02:20:18.293+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59723 #34 (5 connections now open)
+2018-06-15T02:20:18.313+0530 I NETWORK  [conn34] received client metadata from 127.0.0.1:59723 conn34: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:20:18.559+0530 I ACCESS   [conn34] Successfully authenticated as principal root on admin
+2018-06-15T02:20:40.013+0530 I -        [conn34] end connection 127.0.0.1:59723 (5 connections now open)
+2018-06-15T02:21:17.640+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59734 #35 (5 connections now open)
+2018-06-15T02:21:17.656+0530 I NETWORK  [conn35] received client metadata from 127.0.0.1:59734 conn35: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:21:17.878+0530 I ACCESS   [conn35] Successfully authenticated as principal root on admin
+2018-06-15T02:21:19.549+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59735 #36 (6 connections now open)
+2018-06-15T02:21:19.550+0530 I NETWORK  [conn36] received client metadata from 127.0.0.1:59735 conn36: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:21:19.641+0530 I ACCESS   [conn36] Successfully authenticated as principal root on admin
+2018-06-15T02:21:20.802+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:59736 #37 (7 connections now open)
+2018-06-15T02:21:20.803+0530 I NETWORK  [conn37] received client metadata from 127.0.0.1:59736 conn37: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T02:26:05.593+0530 I -        [conn36] end connection 127.0.0.1:59735 (7 connections now open)
+2018-06-15T02:26:05.593+0530 I -        [conn37] end connection 127.0.0.1:59736 (7 connections now open)
+2018-06-15T02:26:05.593+0530 I -        [conn35] end connection 127.0.0.1:59734 (7 connections now open)
+2018-06-15T06:58:23.902+0530 I COMMAND  [ftdc] serverStatus was very slow: { after basic: 0, after asserts: 0, after backgroundFlushing: 0, after connections: 0, after dur: 0, after extra_info: 0, after globalLock: 0, after locks: 0, after network: 0, after opLatencies: 0, after opcounters: 0, after opcountersRepl: 0, after repl: 0, after security: 0, after storageEngine: 0, after wiredTiger: 0, at end: 15402251 }
+2018-06-15T08:49:28.582+0530 I COMMAND  [PeriodicTaskRunner] task: UnusedLockCleaner took: 355ms
+2018-06-15T10:24:34.430+0530 I COMMAND  [PeriodicTaskRunner] task: UnusedLockCleaner took: 102ms
+2018-06-15T12:59:21.094+0530 I COMMAND  [conn20] command admin.$cmd command: isMaster { ismaster: 1 } numYields:0 reslen:189 locks:{} protocol:op_query 128ms
+2018-06-15T16:29:31.460+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:63857 #38 (5 connections now open)
+2018-06-15T16:29:31.461+0530 I NETWORK  [conn38] received client metadata from 127.0.0.1:63857 conn38: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.7" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "17.5.0" } }
+2018-06-15T16:29:31.496+0530 I ACCESS   [conn38] Successfully authenticated as principal root on admin
+2018-06-15T16:42:30.374+0530 I -        [conn23] end connection 127.0.0.1:59251 (5 connections now open)
+2018-06-15T16:43:13.396+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:64914 #39 (5 connections now open)
+2018-06-15T16:43:13.396+0530 I NETWORK  [conn39] received client metadata from 127.0.0.1:64914 conn39: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.7" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "17.5.0" } }
+2018-06-15T16:43:13.428+0530 I ACCESS   [conn39] Successfully authenticated as principal root on admin
+2018-06-15T17:19:29.325+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:65309 #40 (6 connections now open)
+2018-06-15T17:19:29.329+0530 I NETWORK  [conn40] received client metadata from 127.0.0.1:65309 conn40: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T17:21:00.788+0530 I -        [conn40] end connection 127.0.0.1:65309 (6 connections now open)
+2018-06-15T17:25:00.695+0530 I NETWORK  [thread1] connection accepted from 127.0.0.1:65486 #41 (6 connections now open)
+2018-06-15T17:25:00.713+0530 I NETWORK  [conn41] received client metadata from 127.0.0.1:65486 conn41: { driver: { name: "mongo-java-driver", version: "3.4.1" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.13.4" }, platform: "Java/Oracle Corporation/1.8.0_131-b11" }
+2018-06-15T17:25:13.348+0530 I -        [conn41] end connection 127.0.0.1:65486 (6 connections now open)
+2018-06-15T17:30:15.600+0530 I -        [conn38] end connection 127.0.0.1:63857 (5 connections now open)
+2018-06-15T17:30:15.611+0530 I -        [conn39] end connection 127.0.0.1:64914 (4 connections now open)
+2018-06-15T17:30:15.700+0530 I -        [conn22] end connection 127.0.0.1:59250 (3 connections now open)
+2018-06-15T17:30:15.700+0530 I -        [conn21] end connection 127.0.0.1:59249 (2 connections now open)
+2018-06-15T17:30:15.701+0530 I -        [conn20] end connection 127.0.0.1:59248 (1 connection now open)

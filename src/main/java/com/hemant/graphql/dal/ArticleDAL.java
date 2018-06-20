@@ -12,7 +12,7 @@ public interface ArticleDAL {
 
 	void saveArticle(Article art);
 
-	List<Feedback> getFeedbacksForArticle(String articleId, PageRequest pageRequest);
+	List<Feedback> getFeedbacksForArticle(String articleId);
 
 	Article getArticleById(String articleId);
 
